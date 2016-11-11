@@ -3,7 +3,7 @@
 }
 /*小屏的时候*/
 .container {
-  width: 460px;
+  width: 735px;
   margin: auto;
 }
 .container > .row {
@@ -153,19 +153,34 @@
   background-image: url(../img/accessibility_small.jpg);
 }
 .first {
-  background: url(../img/event_small.jpg) no-repeat center;
+  background: url(../img/event_small.jpg) no-repeat;
+  background-size: cover;
+  background-position: center ;
 }
 .second {
-  background: url(../img/macbookpro_small.jpg) no-repeat 50% 40%;
+  background: #fff url(../img/macbookpro_portrait_small.jpg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 .third {
-  background: url(../img/iphone_large.jpg) no-repeat 50% 40%;
+  background: #000 url(../img/iphone_large.jpg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 /*中屏*/
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 735px) {
   .container {
-    width: 660px;
+    width: 735px;
     margin: auto;
+  }
+  .small_nav {
+    display: none;
+  }
+  .nav,
+  .banner,
+  .list,
+  .footer {
+    display: block;
   }
   .promo-nike-watch {
     background-size: 100% 200px;
@@ -188,13 +203,19 @@
     background-image: url(../img/accessibility_medium.jpg);
   }
   .first {
-    background: url(../img/event_medium.jpg) no-repeat 100%;
+    background: url(../img/event_medium.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .second {
-    background: url(../img/macbookpro_medium.jpg) no-repeat 50% 40%;
+    background: #fff url(../img/macbookpro_medium.jpg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
   }
   .third {
-    background: url(../img/iphone_large.jpg) no-repeat center;
+    background: #000 url(../img/iphone_large.jpg) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
   }
   .container > .row > .col-m-1 {
     float: left;
@@ -303,18 +324,39 @@
   }
 }
 /*大屏*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1075px) {
   .container {
-    width: 1200px;
+    width: 1075px;
     margin: auto;
+  }
+  .small_nav {
+    display: none;
+  }
+  .nav,
+  .banner,
+  .list,
+  .footer {
+    display: block;
   }
   .promo-nike-watch {
     background-size: 100% 200px;
     background-repeat: no-repeat;
     background-image: url(../img/nike_watch_large.jpg);
   }
+  .first {
+    background: url(../img/event_large.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .second {
+    background: url(../img/macbookpro_large.jpg) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
   .third {
-    background: url(../img/iphone_large.jpg) no-repeat 100% 60%;
+    background: #000 url(../img/iphone_large.jpg) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
   }
   .promo-airpods {
     background-size: 100% 200px;
@@ -441,7 +483,7 @@ a[class*=col] {
   height: 100%;
   width: 100%;
 }
-li[class*=col] {
+li[class*=promo] {
   height: 200px;
   border: 1px solid #fff;
 }

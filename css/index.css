@@ -84,7 +84,7 @@ a{
     display:inline-block;
     vertical-align: top;
     z-index: 1;
-    text-align: center;
+    /*text-align: center;*/
 }
 .nav_link{
     height:44px;
@@ -202,7 +202,7 @@ a{
     top:0;
     left:0;
     overflow: hidden;
-    z-index: 99999;
+    z-index: 9999999;
 }
 .small_nav .nav_list{
     background: #000;
@@ -230,16 +230,23 @@ ul.small_nav_list .small_nav_search{
     width: 100%;
     height:540px;
 }
-.first{
+.first,.second,.third{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.second,.third{
+    left:100%;
+}
+.first a,.second a,.third a{
     display:block;
     width:100%;
     height:100%;
-    /*background:url(../img/event_large.jpg)no-repeat 50% 40%;*/
 }
-
 .list{
     width:100%;
-    border-bottom:2px solid #fff;
+    border-bottom:4px solid #fff;
 }
 .promo {
     display: block;
@@ -267,6 +274,7 @@ ul.small_nav_list .small_nav_search{
     height:100%;
     position:absolute;
     cursor:pointer ;
+    z-index: 999;
 }
 .pointer_left{
     left:0;
@@ -276,7 +284,8 @@ ul.small_nav_list .small_nav_search{
     right:0;
     top:0;
 }
-.pointer_button{
+.right_button,.left_button{
+    position:absolute;
     width:60px;
     height:60px;
     border-radius:32px;
@@ -287,17 +296,49 @@ ul.small_nav_list .small_nav_search{
     background:rgba(180,180,180,0.25);
     border:none;
     cursor:pointer;
-    display:none;
+    opacity:0;
+    transition:opacity .5s linear;
+    top:0;
+    bottom:0;
+    margin:auto;
 }
-.pointer_left .pointer_button{
-    position:absolute;
-    top:50%;
+.pointer_left .left_button{
     left:10px;
 }
-.pointer_right .pointer_button{
-    position:absolute;
-    top:45%;
+.pointer_right .right_button{
     right:10px;
+}
+.pointer_left:hover>.left_button{
+    opacity:1;
+}
+.pointer_right:hover>.right_button{
+    opacity:1;
+}
+.btn_lists{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:30px;
+    margin:auto;
+    width:170px;
+    height:5px;
+    z-index: 999;
+}
+.btn_lists .btn_list{
+    float:left;
+    width:50px;
+    height:100%;
+    border:1px solid #ccc;
+    margin-right:10px;
+    cursor:pointer;
+}
+.btn_lists .btn_list:last-child{
+    margin:0;
+}
+.btn_list .progress{
+    width:0;
+    height:100%;
+    background:#fff;
 }
 /*footer*/
 .footer {
@@ -426,7 +467,7 @@ ul.small_nav_list .small_nav_search{
     padding-bottom: 20px;
     color: #999;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:800px) {
     .inner-list .inner-list-item{
         width:100%;
         position: relative;
