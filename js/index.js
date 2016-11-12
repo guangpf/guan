@@ -38,7 +38,7 @@ $(function(){
             nextNum=0;
             flag=false;
         }
-        $(".banner_list").eq(currentNum).animate({width:"80%",height:"80%"}).css("zIndex",0);
+        $(".banner_list").eq(currentNum).css({zIndex:0,transform:"scale(1,1)"});
         $(".banner_list").eq(nextNum).animate({left:0},function(){
             $(".banner_list").eq(currentNum).css({
                 left:"100%",width:"100%",height:"100%"
