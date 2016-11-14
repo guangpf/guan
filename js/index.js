@@ -1,6 +1,7 @@
 $(function(){
     $(".pointer_open").click(function(){
         $(".small_nav").slideDown(1000);
+        $("html").css({overflow:"hidden"});
         //$(".top_nav").fadeOut(1000);
         //$(".nav").fadeOut(1000);
         //$(".banner").fadeOut(1000);
@@ -8,7 +9,8 @@ $(function(){
         //$(".footer").fadeOut(1000);
     });
     $(".pointer_close").click(function(){
-        $(".small_nav").slideUp(1000);
+        $(".small_nav").slideUp(1000);4
+        $("html").css({overflow:"visible"});
         //$(".top_nav").fadeIn(1000);
         //$(".nav").fadeIn(500);
         //$(".banner").fadeIn(500);
